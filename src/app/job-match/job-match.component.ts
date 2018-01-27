@@ -9,14 +9,12 @@ import { HttpClient } from '@angular/common/http';
 })
 export class JobMatchComponent {
   history = [];
-  qAndA = {q:null, a: null};
   previousQuestion = '';
   previousAnswer = '';
   currentQuestion = "What do you want to change in your life?";
   currentAnswer: string;
   result: string;
-  conversationStarted = false;
-  count = 1;
+  count = 1; //use lenght of history instead
 
   constructor(private http: HttpClient) {
   }
@@ -30,9 +28,8 @@ export class JobMatchComponent {
     this.http.post("http://localhost:3030/api/question/" + this.count, answ, { headers: { 'Content-Type': 'application/json' } }).subscribe(
       data => {
         console.log(data);
-        this.conversationStarted = true;
-        this.previousQuestion = this.currentQuestion;
-        this.previousAnswer = this.currentAnswer;
+        let qAndA = {q:this.currentQuestion, a: this.currentAnswer};
+        this.history.push(qAndA);
         if (data["question"] != null) {
           this.currentQuestion = data["question"];
         }
