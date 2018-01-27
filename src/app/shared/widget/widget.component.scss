@@ -1,0 +1,11 @@
+.logo-chat a {
+    display: block;
+    width: 10%;
+    background-image: url("pic1.png");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+  }
+  
+  .logo-facebook a:hover {
+    background-position: 0 -31px;
+  }

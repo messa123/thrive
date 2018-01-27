@@ -1,6 +1,13 @@
-<h3> Job Match</h3>
+<h3> Advisor</h3>
 <div>
-    <div class="question">
+    <div *ngIf="conversationStarted" class="question" style="width:60%">
+      <b>{{previousQuestion}}</b>
+      <br>
+        <span>{{previousAnswer}}</span>
+    </div>
+  <div>
+<div>
+    <div class="question" style="width:60%">
       <b>{{currentQuestion}}</b>
       <br>
         <textarea class="form-control" [(ngModel)]="currentAnswer" (keyup.enter)="onFormSubmit()" rows="3" placeholder="Write your answer here"></textarea>
