@@ -15,6 +15,7 @@ export class JobMatchComponent {
   currentAnswer: string;
   result: string;
   count = 1; //use lenght of history instead
+  emotion = "neutral";
 
   constructor(private http: HttpClient) {
   }

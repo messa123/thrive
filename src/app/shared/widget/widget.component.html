@@ -1,19 +1,16 @@
-<div class="card text-white bg-{{bgClass}}">
-  <div class="card-header">
+<div class="text-blue bg-{{bgClass}}">
+  <div>
     <div class="row">
       <div class="col col-xs-3">
-        <i class="fa {{icon}} fa-5x"></i>
+        <a href="jobmatch">
+        <img src={{icon}} style="width:80%"/>
+      </a>
       </div>
-      <div class="col col-xs-9 text-right">
+    </div>
+    <div class="row">
+      <div class="col col-xs-6 text-center">
+        <div class="d-block widName">{{label}}</div>
         <div class="d-block huge">{{count}}</div>
-        <div class="d-block">{{label}}</div>
       </div>
     </div>
   </div>
-  <div class="card-footer">
-    <a href="jobmatch" class="float-right card-inverse">
-        <span class="float-left">Open {{data}}</span>
-            <span ><i class="fa fa-arrow-circle-right"></i></span>
-        </a>
-  </div>
-</div>

@@ -10,6 +10,7 @@ import { JobMatchComponent } from './job-match/job-match.component';
 import { AppRoutingModule } from './app-routing.module';
 import { JobMatchModule } from './job-match/job-match.module';
 import { HttpClientModule } from '@angular/common/http';
+import { EmpathyComponent } from './empathy/empathy.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { HttpClientModule } from '@angular/common/http';
     NavBarComponent,
     HomePageComponent,
     WidgetComponent,
-    JobMatchComponent
+    JobMatchComponent,
+    EmpathyComponent
   ],
   imports: [
     BrowserModule,

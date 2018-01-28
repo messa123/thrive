@@ -1,19 +1,59 @@
-
 .question {
-    margin-bottom: 2%
+  margin-bottom: 2%
 }
 
 .text-field {
-    clear:both;
-    padding: 1%;
-    width: 60%;
+  clear: both;
+  padding: 1%;
+  width: 60%;
 }
-.hist{
-    overflow-y: auto;
-    margin-bottom: 2%
+
+.hist {
+  overflow-y: auto;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  clear: both;
+  border: 1% solid #B5C9D4;
+  padding: 1% 2%;
+  background: #ECF1F4;
+  font-size: 105%;
+  color: #3E7EA0;
+  width: 65%;
+  max-height: 500px;
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.4); //   -moz-border-radius: 1%;
+  //   -webkit-border-radius: 1%;
+  border-radius: 1%;
+  box-shadow: 0px 1px 1px rgba(255, 255, 255, 0.2), 0px 1px 3px rgba(25, 62, 83, 0.1) inset, 0px 0px 0px 8px rgba(155, 180, 195, 0.3);
+  display: inline-block;
 }
 
 body::-webkit-scrollbar-thumb {
   background-color: darkgrey;
   outline: 1px solid slategrey;
+}
+
+.answer {
+  margin-left: 40%;
+  margin-bottom: 1%;
+  text-align: right;
+}
+
+.question {
+  margin-right: 30%;
+  margin-bottom: 1%;
+}
+
+.current {
+  margin-top: 1%;
+}
+
+.empathy {
+  display: inline-block;
+  margin-left: 4%;
+  width: 30%;
+  vertical-align: top;
+}
+
+.pic {
+  margin: 0 auto;
 }
