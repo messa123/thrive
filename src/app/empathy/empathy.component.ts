@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output} from '@angular/core';
+import { Component, OnInit, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-empathy',
@@ -7,15 +7,19 @@ import { Component, OnInit, Input, Output} from '@angular/core';
 })
 export class EmpathyComponent implements OnInit {
   @Input() emotion: string;
-  test = "assets/pic1";
- // src = this.emotion + ".jpg";
- src = this.test + ".png";
+  src = "assets/emotion/" + this.emotion + ".png";
   constructor() { }
 
   ngOnInit() {
-    if(this.emotion == null || this.emotion == undefined){
+    if (this.emotion == null || this.emotion == undefined) {
       this.emotion == "neutral";
     }
+    this.src = "assets/emotion/" + this.emotion + ".png";
   }
+
+  ngOnChanges(changes) {
+    console.log(changes);
+    this.src = "assets/emotion/" + changes.emotion.currentValue + ".png";
+}
 
 }
