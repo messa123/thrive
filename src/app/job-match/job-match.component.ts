@@ -11,7 +11,7 @@ export class JobMatchComponent {
   history = [];
   previousQuestion = '';
   previousAnswer = '';
-  currentQuestion = "Hello!";
+  currentQuestion = "Hello! Welcome to your personal coaching session. Tell me about a challenge you are facing.";
   currentAnswer: string;
   result: string;
   count = 1; //use lenght of history instead
@@ -42,7 +42,7 @@ export class JobMatchComponent {
       "q": this.currentAnswer
     };
     answ = <JSON>obj;
-    this.http.post("http://localhost:3030/api/chat", answ, { headers: { 'Content-Type': 'application/json' } }).subscribe(
+    this.http.post("http://localhost:3030/api/question/" + this.count, answ, { headers: { 'Content-Type': 'application/json' } }).subscribe(
       data => {
         console.log(data);
         let qAndA = { q: this.currentQuestion, a: this.currentAnswer };
